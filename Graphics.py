@@ -2,6 +2,8 @@ import math
 import numpy as np
 from PIL import Image, ImageColor
 
+# Graphics changes
+
 # Helper function to draw a circle on image arr, at position (y, x), of radius r and in colour colour
 def draw_circle(arr, y, x, r, colour):
     acc = 70
