@@ -27,7 +27,7 @@ class Board:
         white = Piece.whitePiece(y, x, king)
         self.whites += [white]
         return white
-    
+    # 7886
     
     # Create a new black piece at position (y, x) and add it to the whites list
     def newBlack(self, y, x, king=False):
