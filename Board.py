@@ -19,7 +19,8 @@ from Graphics import draw_circle
 # White is the player, who moves next (this makes implementation easier: we don't have to 'if' everywhere whose move it is)
 # Rows are represented by 'y' axis, columns by 'x' axis. Both are indexed from 0 to 9. (0, 0) is the left-upper square
 
-
+#lkjsadfhkjfahslkjfdhalksjdfhkljasdfhlkjahdfkljahsdlkjfhfkljadhkljfahklsjheowiurybqoufbjkshfsa
+#zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
 class Board:
     # Create a new white piece at position (y, x) and add it to the whites list
     def newWhite(self, y, x, king=False):
