@@ -21,10 +21,11 @@ class Engine:
     # A player makes a move, update the game's state
     def make_move(self, moves):
         boring_move = False
-        if moves.length == 2:
-            if self.board[moves[0].y][moves[0].x].king:
-                if moves[1].y == moves[0].y:
-                    boring_move = True
+        if len(moves) == 2:
+            if self.board.world[moves[0].y][moves[0].x] != None:
+                if self.board.world[moves[0].y][moves[0].x].king:
+                    if moves[1].y == moves[0].y:
+                        boring_move = True
           
         if boring_move:
             self.boring_moves += 1
