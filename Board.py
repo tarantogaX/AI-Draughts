@@ -7,6 +7,9 @@ import IPython.display
 from Piece import Piece
 from Position import Position
 from Graphics import draw_circle
+# some changes
+# some changes
+# some changes
 
 
 

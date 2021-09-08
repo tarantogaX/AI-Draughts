@@ -5,6 +5,9 @@ from Position import Position
 from Board import Board
 from Engine import Engine
 
+# some changes
+# some changes
+
 
 # Your bot should be a class, which contains a function called make_move(self, board). It should return a move which a bot would make for a given state of board - board.
 # It should return a list of Positions, representing the piece's move. Its first element should be a piece's starting Position and the next values should encode the piece's path:
