@@ -1,9 +1,9 @@
 from Position import Position
 from Board import Board
 
-#hmm teraz chyba dziala
+#hmm teraz chyba dzialaaaaa2
 from func_timeout import func_timeout, FunctionTimedOut
-
+#33333
 # This class holds a full state of the game: a board (as a Board class), an information wether it's the white player's move, and an information wether the game has already finished because one of the players lost
 
 # If a player attempts to make a move which isn't allowed (e. g. move a piece outside of a board, capture more than two enemy's pieces at the same time, move not diagonally, etc., they loose
