@@ -1,5 +1,7 @@
 from Position import Position
 
+# Experimental Piece changes
+
 # A class to keep a piece
 # It stores its location, a boolean which us if its white and a boolean which tells us if it's a king
 class Piece:
