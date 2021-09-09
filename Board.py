@@ -226,7 +226,7 @@ class Board:
 
                 # Update the new_board after this move - remove the captured black piece
                 for black in new_board.blacks:
-                    if black.y == old.y+1 and black.x == old.middle(new).x:
+                    if black.y == old.middle(new).y and black.x == old.middle(new).x:
                         new_board.blacks.remove(black)
                         break
                 new_board.world[old.middle(new).y][old.middle(new).x] = None
