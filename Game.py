@@ -62,9 +62,12 @@ class Game:
             IPython.display.clear_output()
             self.engine.board.show(is_white)
 
-        if (self.engine.board.white_lost()):
-            print("WHITE WINS" if is_white else "BLACK WINS")
-            self.result['winner'] = 'white' if is_white else 'black'
+        if (self.engine.game_finished):
+            if not self.engine.draw:
+                print("WHITE WINS" if is_white else "BLACK WINS")
+                self.result['winner'] = 'white' if is_white else 'black'
+            else:
+                print("DRAW")
             self.engine.board.show()
             self.continue_game = False
     
@@ -95,9 +98,12 @@ class Game:
             IPython.display.clear_output()
             self.engine.board.show(is_white)
 
-        if (self.engine.board.white_lost()):
-            print("WHITE WINS" if is_white else "BLACK WINS")
-            self.result['winner'] = 'white' if is_white else 'black'
+        if (self.engine.game_finished):
+            if not self.engine.draw:
+                print("WHITE WINS" if is_white else "BLACK WINS")
+                self.result['winner'] = 'white' if is_white else 'black'
+            else:
+                print("DRAW")
             self.engine.board.show()
             self.continue_game = False
     
