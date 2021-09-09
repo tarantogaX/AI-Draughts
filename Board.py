@@ -219,7 +219,7 @@ class Board:
         if must_capture:
             if not piece.king:
                 if abs(new.y - old.y) != 2 or abs(new.x - old.x) != 2 or (first_move and new.y - old.y != 2):
-                    print(self.capture_possible(True))
+                    print(self.capture_possible())
                     raise ValueError("You have to capture", self, moves_log)
                 if not self.isBlack(old.middle(new)):
                     raise ValueError("You have to capture an enemy", self, moves_log)
