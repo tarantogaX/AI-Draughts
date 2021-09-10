@@ -32,7 +32,7 @@ class Game:
         self.black = black
         self.continue_game = True
         self.result = {'moves': [], 'winner': ''}
-        self.move_length = 0.5
+        self.move_length = 1
     
     
     # Helping function to encode moves in a form in which we'll store them in result
