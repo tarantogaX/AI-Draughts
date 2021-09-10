@@ -316,3 +316,8 @@ class Board:
 
         out = Image.fromarray(arr)
         display(out)
+        print()
+        print()
+        print()
+        print()
+        print()

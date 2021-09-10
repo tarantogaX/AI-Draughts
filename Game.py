@@ -1,3 +1,4 @@
+import time
 from PIL import Image, ImageColor
 import IPython.display
 
@@ -31,6 +32,7 @@ class Game:
         self.black = black
         self.continue_game = True
         self.result = {'moves': [], 'winner': ''}
+        self.move_length = 0.5
     
     
     # Helping function to encode moves in a form in which we'll store them in result
@@ -47,6 +49,7 @@ class Game:
         move = bot.make_move(self.engine.board)
         self.result['moves'] += [Game.move_to_dictionary(move)]
         
+        start_time = time.time()
         try:
             self.engine.make_move(move)
         except ValueError as ve:
@@ -57,6 +60,10 @@ class Game:
             ve.args[1].show()
             self.continue_game = False
             return
+        end_time = time.time()
+        time_elapsed = end_time - start_time
+        if time_elapsed < self.move_length:
+            time.sleep(self.move_length - time_elapsed)
             
         if draw_board:
             IPython.display.clear_output()
@@ -68,7 +75,6 @@ class Game:
                 self.result['winner'] = 'white' if is_white else 'black'
             else:
                 print("DRAW")
-            self.engine.board.show()
             self.continue_game = False
     
     
@@ -104,7 +110,6 @@ class Game:
                 self.result['winner'] = 'white' if is_white else 'black'
             else:
                 print("DRAW")
-            self.engine.board.show()
             self.continue_game = False
     
     
